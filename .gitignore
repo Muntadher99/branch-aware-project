@@ -1,0 +1,8 @@
+output/
+output_all/
+output_quick/
+slprj/
+*.slxc
+*.asv
+*.autosave
+__pycache__/

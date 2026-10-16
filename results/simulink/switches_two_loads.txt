@@ -1,0 +1,30 @@
+load 80 ohm + 25 mH per phase (PF 0.995), model test
+case             Ma   from     to    circ_peak  exact_start   circ_ss_diff  exact_ss_diff
+switch_01    0.7162      1     71       18.146       17.855         19.777         19.537
+switch_02    0.7432     71     19        1.911        1.789         15.441         15.035
+switch_03    0.8034     19     13        2.065        1.899          8.226          8.044
+switch_04    0.8294     13     15        1.480        1.430          9.830          9.416
+switch_05    0.8550     15     36        1.337        1.241         13.249         12.908
+switch_06    0.8983     36     75        1.929        1.852          8.961          8.751
+switch_07    0.9540     75     49        1.663        1.763          6.374          6.274
+switch_08    1.0862     49     59        0.023        0.021          9.564          9.405
+switch_09    1.0997     59     57        0.226        0.260         14.196         13.970
+switch_10    1.1750     57     74        5.795        5.861          7.044          6.825
+switch_11    1.1975     74     70        1.639        1.584         11.823         11.582
+largest |circuit peak - exact|: 0.291 pp of I1 over 11 switch points
+
+load 64 ohm + 180 mH per phase (PF 0.749), model test
+case             Ma   from     to    circ_peak  exact_start   circ_ss_diff  exact_ss_diff
+switch_01    0.7162      1     71        2.984        2.892          2.985          2.892
+switch_02    0.7432     71     19        0.119        0.142          2.674          2.606
+switch_03    0.8034     19     13        0.452        0.457          1.221          1.014
+switch_04    0.8294     13     15        0.223        0.261          1.455          1.296
+switch_05    0.8550     15     36        0.184        0.070          2.358          2.057
+switch_06    0.8983     36     75        0.466        0.476          1.274          1.153
+switch_07    0.9540     75     49        0.749        0.753          1.051          1.039
+switch_08    1.0862     49     59        0.209        0.164          1.848          1.833
+switch_09    1.0997     59     57        0.286        0.259          2.100          2.001
+switch_10    1.1750     57     74        0.821        0.876          1.070          1.007
+switch_11    1.1975     74     70        0.277        0.253          1.727          1.733
+largest |circuit peak - exact|: 0.114 pp of I1 over 11 switch points
+

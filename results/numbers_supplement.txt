@@ -1,0 +1,8 @@
+% per-order compliance under the stricter limit (Section 6.2)
+strict.grid.optimum = 35.82089552   % optimum on the grid: compliant with 0.2+12.5/n above the 25th, %
+strict.mid.optimum = 35.5   % optimum at the 200 midpoints (R = 100): compliant with 0.2+12.5/n above the 25th, %
+strict.mid.plain = 27   % plain at the 200 midpoints (R = 100): compliant with 0.2+12.5/n above the 25th, %
+strict.mid.branch_aware = 29.5   % branch-aware at the 200 midpoints (R = 100): compliant with 0.2+12.5/n above the 25th, %
+standard.mid.optimum = 89   % optimum at the midpoints: compliant with 0.2+32.5/n above the 25th (as stage CMP), %
+standard.mid.plain = 77   % plain at the midpoints: compliant with 0.2+32.5/n above the 25th (as stage CMP), %
+standard.mid.branch_aware = 86   % branch-aware at the midpoints: compliant with 0.2+32.5/n above the 25th (as stage CMP), %

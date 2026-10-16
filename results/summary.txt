@@ -1,0 +1,385 @@
+SHM branch-decomposition paper: headline numbers
+run: 2026-10-15 18:56, mode full, solver fmincon, MATLAB 24.2.0.2712019 (R2024b), PCWIN64
+----------------------------------------------------------------------------------------------------
+angles                                 15   switching angles per quarter cycle
+orders                                 16   odd non-triplen orders in THD49 (5..49)
+ma.lo                                0.70   lowest modulation index of the study
+ma.hi                                1.20   highest modulation index of the study
+ma.step                            0.0025   modulation-index step of the traced grid
+grid.points                           201   grid points along Ma
+anchors                                11   multistart anchors
+nstart                                150   random starts per anchor
+distinct.mean                       104.2   distinct local optima per anchor, mean
+distinct.max                          112   distinct local optima at one anchor, max
+hitrate                               1.1   % of converged random starts that reach the best optimum
+spread                               9.41   median minus best THD49 among the distinct optima, pp
+branches                               76   distinct continuous branches traced
+owners                                 17   branches that own part of the per-Ma optimum
+ownerchanges                           21   owner changes of the per-Ma optimum over the grid
+jump.mean                            27.2   mean jump of the optimal angle vector at an owner change, deg
+jump.max                             49.2   largest jump of the optimal angle vector, deg
+stored                                 13   branches kept in the stored subset
+stored.gap.mean                    0.0004   mean gap of the stored subset to the full envelope, pp
+stored.gap.max                     0.0282   worst gap of the stored subset to the full envelope, pp
+coverage                            100.0   % of grid points where some branch exists
+env.thd.mean                         2.13   mean THD49 of the per-Ma optimum, %
+env.thd.min                          0.22   lowest THD49 of the per-Ma optimum, %
+env.thd.max                          3.86   highest THD49 of the per-Ma optimum, %
+nfe.branchset                    17696578   objective evaluations to build the branch set
+time.branchset                       29.3   minutes to build the branch set
+effangles.min                        12.0   fewest effective angles on any branch (collapsed pairs removed)
+traces                                 91   continuation traces before merging (seeds and probes)
+probes                                 50   modulation indices of the probe multistart
+probe.nstart                          100   random starts per probe
+probe.traces                           11   traces added because a probe beat the envelope
+probe.hits                              2   probes that found an optimum below the envelope
+fold.points                            24   grid points searched just beyond the ends of owning branches
+fold.traces                             2   traces added by that fold-end search
+dropped                                 0   traces of one or two grid points that own nothing, dropped
+distinct.mean.0p5                   102.5   distinct optima per anchor, clustered at 0.5 deg, mean
+distinct.mean.2                      99.5   distinct optima per anchor, clustered at 2 deg, mean
+distinct.levels                      95.6   distinct THD49 levels (1e-3 pp apart) per anchor, mean
+distinct.within1pp                   10.4   distinct optima within 1 pp of the best, per anchor, mean
+jump.wave.mean                       15.1   share of the period in which the optimal voltage changes at an owner change, mean, %
+jump.wave.max                        48.8   share of the period in which the optimal voltage changes at an owner change, largest, %
+jump.wave.min                         4.3   share of the period in which the optimal voltage changes at an owner change, smallest, %
+jump.wave.at.maxangle                 4.3   the same at the owner change with the largest angle move, %
+distinct.once                          83   share of the distinct optima reached by a single random start, per anchor, mean, %
+distinct.chao1                        480   Chao1 estimate of the total number of local optima per anchor, mean (the distinct count is a lower bound)
+lut.excess.R10                    21.9503   LUT at R = 10: mean THD49 excess over the optimum, pp
+lut.excessmax.R10                  63.309   LUT at R = 10: worst THD49 excess, pp
+lut.angmax.R10                      41.19   LUT at R = 10: worst angle error, deg
+lut.fund.R10                        0.185   LUT at R = 10: mean fundamental error, %
+lut.excess.R25                    13.3422   LUT at R = 25: mean THD49 excess over the optimum, pp
+lut.excessmax.R25                  62.555   LUT at R = 25: worst THD49 excess, pp
+lut.angmax.R25                      37.65   LUT at R = 25: worst angle error, deg
+lut.fund.R25                        0.108   LUT at R = 25: mean fundamental error, %
+lut.excess.R50                     7.6717   LUT at R = 50: mean THD49 excess over the optimum, pp
+lut.excessmax.R50                  62.767   LUT at R = 50: worst THD49 excess, pp
+lut.angmax.R50                      39.05   LUT at R = 50: worst angle error, deg
+lut.fund.R50                        0.073   LUT at R = 50: mean fundamental error, %
+lut.excess.R100                    3.7973   LUT at R = 100: mean THD49 excess over the optimum, pp
+lut.excessmax.R100                 59.862   LUT at R = 100: worst THD49 excess, pp
+lut.angmax.R100                     48.42   LUT at R = 100: worst angle error, deg
+lut.fund.R100                       0.044   LUT at R = 100: mean fundamental error, %
+nearest.excess.R10                 0.0610   NEAREST at R = 10: mean THD49 excess over the optimum, pp
+nearest.excessmax.R10               1.923   NEAREST at R = 10: worst THD49 excess, pp
+nearest.angmax.R10                  52.70   NEAREST at R = 10: worst angle error, deg
+nearest.fund.R10                    1.567   NEAREST at R = 10: mean fundamental error, %
+nearest.excess.R25                 0.0100   NEAREST at R = 25: mean THD49 excess over the optimum, pp
+nearest.excessmax.R25               0.665   NEAREST at R = 25: worst THD49 excess, pp
+nearest.angmax.R25                  40.62   NEAREST at R = 25: worst angle error, deg
+nearest.fund.R25                    0.637   NEAREST at R = 25: mean fundamental error, %
+nearest.excess.R50                 0.0005   NEAREST at R = 50: mean THD49 excess over the optimum, pp
+nearest.excessmax.R50               0.452   NEAREST at R = 50: worst THD49 excess, pp
+nearest.angmax.R50                  49.20   NEAREST at R = 50: worst angle error, deg
+nearest.fund.R50                    0.364   NEAREST at R = 50: mean fundamental error, %
+nearest.excess.R100               -0.0082   NEAREST at R = 100: mean THD49 excess over the optimum, pp
+nearest.excessmax.R100              0.150   NEAREST at R = 100: worst THD49 excess, pp
+nearest.angmax.R100                 47.63   NEAREST at R = 100: worst angle error, deg
+nearest.fund.R100                   0.269   NEAREST at R = 100: mean fundamental error, %
+sqp.excess.R10                     4.7744   LUT+SQP at R = 10: mean THD49 excess over the optimum, pp
+sqp.excessmax.R10                  31.525   LUT+SQP at R = 10: worst THD49 excess, pp
+sqp.angmax.R10                      78.09   LUT+SQP at R = 10: worst angle error, deg
+sqp.fund.R10                        0.003   LUT+SQP at R = 10: mean fundamental error, %
+sqp.excess.R25                     2.4875   LUT+SQP at R = 25: mean THD49 excess over the optimum, pp
+sqp.excessmax.R25                  30.501   LUT+SQP at R = 25: worst THD49 excess, pp
+sqp.angmax.R25                      78.48   LUT+SQP at R = 25: worst angle error, deg
+sqp.fund.R25                        0.000   LUT+SQP at R = 25: mean fundamental error, %
+sqp.excess.R50                     1.3759   LUT+SQP at R = 50: mean THD49 excess over the optimum, pp
+sqp.excessmax.R50                  29.799   LUT+SQP at R = 50: worst THD49 excess, pp
+sqp.angmax.R50                      76.64   LUT+SQP at R = 50: worst angle error, deg
+sqp.fund.R50                        0.000   LUT+SQP at R = 50: mean fundamental error, %
+sqp.excess.R100                    0.5158   LUT+SQP at R = 100: mean THD49 excess over the optimum, pp
+sqp.excessmax.R100                 29.182   LUT+SQP at R = 100: worst THD49 excess, pp
+sqp.angmax.R100                     76.44   LUT+SQP at R = 100: worst angle error, deg
+sqp.fund.R100                       0.000   LUT+SQP at R = 100: mean fundamental error, %
+cont.excess.R10                    2.9051   CONT at R = 10: mean THD49 excess over the optimum, pp
+cont.excessmax.R10                  7.882   CONT at R = 10: worst THD49 excess, pp
+cont.angmax.R10                     49.71   CONT at R = 10: worst angle error, deg
+cont.fund.R10                       0.040   CONT at R = 10: mean fundamental error, %
+cont.excess.R25                    1.7159   CONT at R = 25: mean THD49 excess over the optimum, pp
+cont.excessmax.R25                  6.730   CONT at R = 25: worst THD49 excess, pp
+cont.angmax.R25                     48.59   CONT at R = 25: worst angle error, deg
+cont.fund.R25                       0.007   CONT at R = 25: mean fundamental error, %
+cont.excess.R50                    1.3021   CONT at R = 50: mean THD49 excess over the optimum, pp
+cont.excessmax.R50                  5.197   CONT at R = 50: worst THD49 excess, pp
+cont.angmax.R50                     48.43   CONT at R = 50: worst angle error, deg
+cont.fund.R50                       0.003   CONT at R = 50: mean fundamental error, %
+cont.excess.R100                   1.1490   CONT at R = 100: mean THD49 excess over the optimum, pp
+cont.excessmax.R100                 3.979   CONT at R = 100: worst THD49 excess, pp
+cont.angmax.R100                    48.42   CONT at R = 100: worst angle error, deg
+cont.fund.R100                      0.002   CONT at R = 100: mean fundamental error, %
+branch.excess.R10                  1.2992   BRANCH at R = 10: mean THD49 excess over the optimum, pp
+branch.excessmax.R10               13.031   BRANCH at R = 10: worst THD49 excess, pp
+branch.angmax.R10                   52.62   BRANCH at R = 10: worst angle error, deg
+branch.fund.R10                     0.004   BRANCH at R = 10: mean fundamental error, %
+branch.excess.R25                  0.3848   BRANCH at R = 25: mean THD49 excess over the optimum, pp
+branch.excessmax.R25               10.243   BRANCH at R = 25: worst THD49 excess, pp
+branch.angmax.R25                   52.62   BRANCH at R = 25: worst angle error, deg
+branch.fund.R25                     0.018   BRANCH at R = 25: mean fundamental error, %
+branch.excess.R50                  0.1626   BRANCH at R = 50: mean THD49 excess over the optimum, pp
+branch.excessmax.R50                6.860   BRANCH at R = 50: worst THD49 excess, pp
+branch.angmax.R50                   52.62   BRANCH at R = 50: worst angle error, deg
+branch.fund.R50                     0.003   BRANCH at R = 50: mean fundamental error, %
+branch.excess.R100                 0.0706   BRANCH at R = 100: mean THD49 excess over the optimum, pp
+branch.excessmax.R100               2.023   BRANCH at R = 100: worst THD49 excess, pp
+branch.angmax.R100                  50.94   BRANCH at R = 100: worst angle error, deg
+branch.fund.R100                    0.003   BRANCH at R = 100: mean fundamental error, %
+lut.floor.ratio                      0.17   LUT mean excess at R = 100 divided by that at R = 10 (1 = no improvement at all)
+lut.worst.ratio                      0.95   LUT worst excess at R = 100 divided by that at R = 10
+lut.slope                           -0.76   log-log slope of the LUT mean excess vs R (resolution error alone: -2)
+branch.slope                        -2.00   log-log slope of the branch-aware mean excess vs stored sets
+split.slope.same                    -2.78   log-log slope of the same-owner (resolution) error vs R, median |excess|
+split.slope.straddle                -0.05   log-log slope of the straddling (structural) error vs R, median |excess|
+split.slope.same.mean               -1.74   log-log slope of the same-owner error vs R, mean
+split.slope.straddle.mean           -0.03   log-log slope of the straddling error vs R, mean
+split.frac.R10                       89.0   % of test points whose bracketing rows straddle an owner change, R = 10
+split.straddle.R10                 24.661   mean excess of straddling intervals, R = 10, pp
+split.same.R10                    0.00210   mean excess of same-owner intervals, R = 10, pp
+split.straddle.median.R10          19.070   median |excess| of straddling intervals, R = 10, pp
+split.same.median.R10            2.19e-03   median |excess| of same-owner intervals, R = 10, pp
+split.same.p90.R10               3.76e-03   90th percentile |excess| of same-owner intervals, R = 10, pp
+split.frac.R25                       46.0   % of test points whose bracketing rows straddle an owner change, R = 25
+split.straddle.R25                 28.989   mean excess of straddling intervals, R = 25, pp
+split.same.R25                    0.00123   mean excess of same-owner intervals, R = 25, pp
+split.straddle.median.R25          27.360   median |excess| of straddling intervals, R = 25, pp
+split.same.median.R25            3.63e-05   median |excess| of same-owner intervals, R = 25, pp
+split.same.p90.R25               1.95e-03   90th percentile |excess| of same-owner intervals, R = 25, pp
+split.frac.R50                       27.8   % of test points whose bracketing rows straddle an owner change, R = 50
+split.straddle.R50                 27.581   mean excess of straddling intervals, R = 50, pp
+split.same.R50                    0.00017   mean excess of same-owner intervals, R = 50, pp
+split.straddle.median.R50          24.542   median |excess| of straddling intervals, R = 50, pp
+split.same.median.R50            1.09e-05   median |excess| of same-owner intervals, R = 50, pp
+split.same.p90.R50               9.76e-05   90th percentile |excess| of same-owner intervals, R = 50, pp
+split.frac.R100                      16.8   % of test points whose bracketing rows straddle an owner change, R = 100
+split.straddle.R100                22.560   mean excess of straddling intervals, R = 100, pp
+split.same.R100                   0.00005   mean excess of same-owner intervals, R = 100, pp
+split.straddle.median.R100         16.736   median |excess| of straddling intervals, R = 100, pp
+split.same.median.R100           3.22e-06   median |excess| of same-owner intervals, R = 100, pp
+split.same.p90.R100              1.29e-05   90th percentile |excess| of same-owner intervals, R = 100, pp
+split.straddle.Rmax                22.560   straddling-interval excess at R = 100, pp
+split.same.Rmax                   0.00005   same-owner-interval excess at R = 100, pp
+basin.onowner                        61.4   % of corrected points (R = 25) that land on the owning branch
+basin.onowner.near                   14.3   % landing on the owning branch within two grid steps of an owner change
+basin.onowner.far                    79.5   % landing on the owning branch farther from an owner change
+basin.excess.wrong                  6.438   mean THD49 excess where the corrector landed on another branch, pp
+basin.ok.near                        28.6   % of corrected points within 0.01 pp of the optimum, within two grid steps of an owner change
+basin.ok.far                         79.5   % of corrected points within 0.01 pp of the optimum, farther from an owner change
+cont.cost.mean                      0.999   mean THD49 cost of the continuity-constrained path, pp
+cont.cost.max                       2.282   worst THD49 cost of the continuity-constrained path, pp
+cont.breaks                             0   places where even the continuity-constrained path must jump
+cont.jumps.env                         20   jumps (> 5 deg) the per-Ma optimum makes over the grid
+cont.jumps.zero                        11   fewest jumps of a path whose mean THD cost is below 1e-4 pp (the rest only swap near-equal branches)
+cont.jumps.for.1                        0   fewest jumps that keep the mean THD49 cost at or below 1 pp
+cont.jumps.for.0p1                      5   fewest jumps that keep the mean THD49 cost at or below 0.1 pp
+cont.jumps.for.0p01                     8   fewest jumps that keep the mean THD49 cost at or below 0.01 pp
+cont.cost.k1                        0.688   mean THD49 cost of the best path allowed one jump, pp
+reg1.linear.K41                    0.0101   1-D regression, K = 41: angle MAE of linear, deg
+reg1.linear.K6                     0.1820   1-D regression, K = 6: angle MAE of linear, deg
+reg1.spline.K41                    0.0077   1-D regression, K = 41: angle MAE of spline, deg
+reg1.spline.K6                     0.1351   1-D regression, K = 6: angle MAE of spline, deg
+reg1.pchip.K41                     0.0068   1-D regression, K = 41: angle MAE of pchip, deg
+reg1.pchip.K6                      0.1359   1-D regression, K = 6: angle MAE of pchip, deg
+reg1.RBF.K41                       0.0092   1-D regression, K = 41: angle MAE of RBF, deg
+reg1.RBF.K6                        0.1741   1-D regression, K = 6: angle MAE of RBF, deg
+reg1.GP.K41                        0.0114   1-D regression, K = 41: angle MAE of GP, deg
+reg1.GP.K6                         0.2451   1-D regression, K = 6: angle MAE of GP, deg
+reg1.tanhLM.K41                    0.0119   1-D regression, K = 41: angle MAE of tanhLM, deg
+reg1.tanhLM.K6                     0.1463   1-D regression, K = 6: angle MAE of tanhLM, deg
+reg1.MLP.K41                       0.0441   1-D regression, K = 41: angle MAE of MLP, deg
+reg1.MLP.K6                        0.5077   1-D regression, K = 6: angle MAE of MLP, deg
+reg1.ANFIS.K41                     0.0140   1-D regression, K = 41: angle MAE of ANFIS, deg
+reg1.ANFIS.K6                      0.3298   1-D regression, K = 6: angle MAE of ANFIS, deg
+reg1.mlp.ratio                        6.4   MLP angle MAE divided by the best interpolant (pchip) at K = 41
+reg1.mlp.seedcv                        23   seed-to-seed coefficient of variation of the MLP MAE, %
+reg2.linear                        0.0555   2-D regression, largest lattice (64 points): angle MAE of linear, deg
+reg2.spline                        0.0384   2-D regression, largest lattice (64 points): angle MAE of spline, deg
+reg2.RBF                           0.0468   2-D regression, largest lattice (64 points): angle MAE of RBF, deg
+reg2.GP                            0.0598   2-D regression, largest lattice (64 points): angle MAE of GP, deg
+reg2.tanhLM                        0.0485   2-D regression, largest lattice (64 points): angle MAE of tanhLM, deg
+reg2.MLP                           0.0774   2-D regression, largest lattice (64 points): angle MAE of MLP, deg
+reg2.ANFIS                         0.0553   2-D regression, largest lattice (64 points): angle MAE of ANFIS, deg
+reg3.linear                        0.0189   3-D regression, largest lattice (216 points): angle MAE of linear, deg
+reg3.spline                        0.0120   3-D regression, largest lattice (216 points): angle MAE of spline, deg
+reg3.RBF                           0.0119   3-D regression, largest lattice (216 points): angle MAE of RBF, deg
+reg3.GP                            0.0208   3-D regression, largest lattice (216 points): angle MAE of GP, deg
+reg3.tanhLM                        0.0246   3-D regression, largest lattice (216 points): angle MAE of tanhLM, deg
+reg3.MLP                           0.0197   3-D regression, largest lattice (216 points): angle MAE of MLP, deg
+reg3.ANFIS                         0.0265   3-D regression, largest lattice (216 points): angle MAE of ANFIS, deg
+dstar.sel.K9                         4.33   dimension from which a 9-per-axis label table outgrows the classifier
+dstar.reg.K9                         3.25   dimension from which a 9-per-axis angle table outgrows one MLP per branch
+dstar.sel.K17                        3.36   dimension from which a 17-per-axis label table outgrows the classifier
+dstar.reg.K17                        2.52   dimension from which a 17-per-axis angle table outgrows one MLP per branch
+dstar.sel.K25                        2.95   dimension from which a 25-per-axis label table outgrows the classifier
+dstar.reg.K25                        2.22   dimension from which a 25-per-axis angle table outgrows one MLP per branch
+t.lut                                34.4   table lookup + linear interpolation, microseconds per call
+t.pchip                              71.5   pchip evaluation inside a branch, microseconds per call
+t.cls                                86.4   softmax classifier forward pass, microseconds per call
+t.mlp                               267.8   MLP forward pass, microseconds per call
+t.sqp                             30771.7   SQP corrector (fmincon, warm start), microseconds per call
+dense.points                           61   off-grid points of the independent multistart check
+dense.nstart                          200   fresh random starts per off-grid point
+dense.gap.mean                    -0.4249   stored branches minus independent multistart, mean, pp
+dense.gap.worst                    0.0022   stored branches minus independent multistart, worst, pp
+dense.better                           32   off-grid points where the stored branches beat the multistart
+dense.over1                             0   off-grid points where the stored branches lose by more than 1 pp
+dense.over0p1                           0   off-grid points where the stored branches lose by more than 0.1 pp
+dense.gap.worst.interp             0.0268   the same without the corrector: the table's own interpolation, worst, pp
+dense.better.max                     1.76   largest margin by which the stored branches beat the fresh multistart, pp
+dense.interp.used                       0   off-grid points whose stored value is a branch's interpolated angles (its corrector failed or left it)
+dense.corr.fail                         1   off-grid points where the corrector of the best interpolated branch did not converge or left the branch
+spec.ma                              1.00   Ma of the spectrum audit quoted
+spec.thd49                           2.44   THD49 at that Ma, %
+spec.thd99                           25.7   THD to the 99th at that Ma, %
+spec.thdfull                         34.2   THD to the 999th at that Ma, %
+spec.wthd                           0.499   weighted THD (1/n) to the 999th at that Ma, %
+spec.oob                             17.1   largest single harmonic above the 49th, % of b1
+spec.oob.order                         55   its order
+comply                               89.6   % of the envelope meeting the per-order limits (0.2+32.5/n above the 25th)
+comply.alt                           35.8   % meeting them with 0.2+12.5/n above the 25th
+bound.ub.model                     89.875   the model's upper angle bound, 90 - theta_gap/2, deg
+bound.ub.min                           80   tightest upper angle bound tested, deg
+bound.cost.mean                     0.825   mean rise of the best THD49 from the model's bound to the tightest one, pp
+bound.cost.max                      1.688   largest rise of the best THD49 from the model's bound to the tightest one, pp
+bound.cost89.max                    1.030   largest rise of the best THD49 if the angles were kept below 89 deg, pp
+sw.dev                            1.6e-15   worst relative deviation, closed form vs exact Fourier integral of the gate pattern
+sw.fftdev                          0.0096   worst |THD49 sampled FFT - model| at zero dead time, pp
+sw.dthd.2us                         0.092   largest change of THD49 of the optimal patterns caused by a 2 us dead time, pp
+sw.dthd.4us                         0.089   largest change of THD49 of the optimal patterns caused by a 4 us dead time, pp
+sw.loss.1us                           0.0   % of the envelope whose narrowest pulse is shorter than a 1 us dead time
+sw.loss.2us                           0.0   % of the envelope whose narrowest pulse is shorter than a 2 us dead time
+sw.loss.4us                           0.0   % of the envelope whose narrowest pulse is shorter than a 4 us dead time
+sw.loss.8us                           0.0   % of the envelope whose narrowest pulse is shorter than a 8 us dead time
+sim.cases                               9   steady-state cases whose circuit ran the commanded angles
+sim.invalid                             0   cases left out: the circuit did not run the commanded angles (must be 0)
+sim.vdc                               800   DC-link voltage of the circuit model, V
+sim.ts.us                               1   time step of the logged line-to-line voltage, us
+sim.opt.dev.max                     0.098   optimal patterns: largest |circuit - analytic| THD49, pp
+sim.opt.samp.max                    0.004   optimal patterns: largest |sampled ideal - analytic| THD49 (the time step), pp
+sim.opt.circ.max                    0.101   optimal patterns: largest |circuit - sampled ideal| THD49 (what the circuit adds), pp
+sim.opt.ma.dev                       0.23   optimal patterns: largest relative error of the circuit's fundamental, %
+sim.lut.rows                          100   rows of the largest table simulated at its worst point
+sim.lut.ma                         0.7925   Ma of that worst point
+sim.lut.model                       60.90   that table's interpolated angles: analytic THD49, %
+sim.lut.circuit                     60.92   that table's interpolated angles: circuit THD49, %
+sim.lut.ithd                         5.53   that table's interpolated angles: phase-current THD49, %
+sim.branch.model                     1.04   branch-aware table at the same Ma: analytic THD49, %
+sim.branch.circuit                   0.98   branch-aware table at the same Ma: circuit THD49, %
+sim.branch.ithd                      0.08   branch-aware table at the same Ma: phase-current THD49, %
+sim.np.pp.max                        13.6   largest peak-to-peak NP voltage over the steady-state windows, V
+sim.step.wave.pct                    48.8   branch switch (the owner change that changes the waveform most): share of the period that changes, %
+sim.step.jump.deg                    30.7   branch switch: largest angle move at the switch, deg
+sim.step.peak.jump                   0.37   branch switch: peak phase-current deviation from the new steady state, % of I1
+sim.step.pre.jump                    2.38   branch switch: how far apart the two steady-state currents are, % of I1
+sim.step.offset.jump                 0.05   branch switch: mean current offset over the first cycle after the switch, % of I1
+sim.step.peak.stay                   0.22   the same Ma step on the old branch (no branch switch): peak phase-current deviation, % of I1
+sim.step.angle.deg                   49.2   second branch switch, at the largest angle move: that move, deg
+sim.step.angle.wave.pct               4.3   second branch switch: share of the period that changes, %
+sim.step.angle.peak                  0.18   second branch switch: peak phase-current deviation from the new steady state, % of I1
+sim.step.angle.pre                   0.92   second branch switch: how far apart the two steady-state currents are, % of I1
+ni.R                                  100   rows (sets) of the tables evaluated under non-ideal switching
+ni.conds                                6   non-ideal conditions evaluated over the whole range
+ni.ideal.opt.dmax                   0.100   ideal switches: optimum, largest |THD49 - closed form|, pp
+ni.ideal.opt.b1                      0.06   ideal switches: optimum, largest |fundamental error|, %
+ni.ideal.lut.mean                    3.87   ideal switches: table, mean excess over the optimum, pp
+ni.ideal.lut.max                     62.9   ideal switches: table, worst excess over the optimum, pp
+ni.ideal.br.mean                    0.057   ideal switches: branch-aware table, mean excess, pp
+ni.ideal.br.max                      2.85   ideal switches: branch-aware table, worst excess, pp
+ni.drops.opt.dmax                   0.153   datasheet devices: optimum, largest |THD49 - closed form|, pp
+ni.drops.opt.b1                      0.55   datasheet devices: optimum, largest |fundamental error|, %
+ni.drops.lut.mean                    3.89   datasheet devices: table, mean excess over the optimum, pp
+ni.drops.lut.max                     63.3   datasheet devices: table, worst excess over the optimum, pp
+ni.drops.br.mean                    0.056   datasheet devices: branch-aware table, mean excess, pp
+ni.drops.br.max                      2.82   datasheet devices: branch-aware table, worst excess, pp
+ni.dt.opt.dmax                      0.455   + dead time 2 us: optimum, largest |THD49 - closed form|, pp
+ni.dt.opt.b1                         1.10   + dead time 2 us: optimum, largest |fundamental error|, %
+ni.dt.lut.mean                       3.92   + dead time 2 us: table, mean excess over the optimum, pp
+ni.dt.lut.max                        63.7   + dead time 2 us: table, worst excess over the optimum, pp
+ni.dt.br.mean                       0.057   + dead time 2 us: branch-aware table, mean excess, pp
+ni.dt.br.max                         2.77   + dead time 2 us: branch-aware table, worst excess, pp
+ni.np.opt.dmax                      0.737   + NP offset 2%: optimum, largest |THD49 - closed form|, pp
+ni.np.opt.b1                         0.55   + NP offset 2%: optimum, largest |fundamental error|, %
+ni.np.lut.mean                       3.85   + NP offset 2%: table, mean excess over the optimum, pp
+ni.np.lut.max                        62.9   + NP offset 2%: table, worst excess over the optimum, pp
+ni.np.br.mean                       0.051   + NP offset 2%: branch-aware table, mean excess, pp
+ni.np.br.max                         2.65   + NP offset 2%: branch-aware table, worst excess, pp
+ni.tq.opt.dmax                      0.173   + timer 1 us: optimum, largest |THD49 - closed form|, pp
+ni.tq.opt.b1                         0.61   + timer 1 us: optimum, largest |fundamental error|, %
+ni.tq.lut.mean                       3.89   + timer 1 us: table, mean excess over the optimum, pp
+ni.tq.lut.max                        63.3   + timer 1 us: table, worst excess over the optimum, pp
+ni.tq.br.mean                       0.056   + timer 1 us: branch-aware table, mean excess, pp
+ni.tq.br.max                         2.86   + timer 1 us: branch-aware table, worst excess, pp
+ni.all.opt.dmax                     0.898   all combined: optimum, largest |THD49 - closed form|, pp
+ni.all.opt.b1                        1.13   all combined: optimum, largest |fundamental error|, %
+ni.all.lut.mean                      3.87   all combined: table, mean excess over the optimum, pp
+ni.all.lut.max                       63.3   all combined: table, worst excess over the optimum, pp
+ni.all.br.mean                      0.052   all combined: branch-aware table, mean excess, pp
+ni.all.br.max                        2.65   all combined: branch-aware table, worst excess, pp
+ni.opt.dmax                         0.898   largest |THD49 - closed form| of the optimum under any condition, pp
+ni.lut.spread                        0.07   spread of the table's mean excess across the conditions, pp
+ni.br.spread                        0.006   spread of the branch-aware mean excess across the conditions, pp
+ni.ripple.pp                          7.3   largest neutral-point ripple in the switching-function model, V peak to peak
+sim.ni.runs                            54   circuit runs with datasheet switches that ran the commanded angles
+sim.ni.invalid                          0   runs left out: commanded angles not run (must be 0)
+sim.ni.conds                            6   non-ideal conditions simulated
+sim.ni.swfn.max                     0.013   circuit minus switching-function model, optimal and branch-aware patterns, largest |difference|, pp
+sim.ni.swfn.lut.rel                  0.18   the same for the table's angles, % of their THD49
+sim.ni.offset.max                    1.49   largest |neutral-point offset| the circuit had in the analysis window, % of Vdc
+sim.ni.swfn.cmd.max                 0.606   circuit minus switching-function model at the COMMANDED offset (not the measured one), largest |difference|, pp
+sim.ni.lut.rows                       100   rows of the largest table simulated with datasheet switches
+sim.ni.ideal.opt.dev                0.114   ideal switches: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.ideal.b1                      0.04   ideal switches: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.ideal.ripple.pp               24.3   ideal switches: largest neutral-point voltage, V peak to peak
+sim.ni.ideal.offset.min             -1.49   ideal switches: smallest measured NP offset, % of Vdc
+sim.ni.ideal.offset.max             -0.47   ideal switches: largest measured NP offset, % of Vdc
+sim.ni.ideal.lut.circuit            60.82   ideal switches: table at its worst point, circuit THD49, %
+sim.ni.ideal.lut.ithd                6.49   ideal switches: the same, phase-current THD49, %
+sim.ni.ideal.branch.circuit           1.13   ideal switches: branch-aware table at that Ma, circuit THD49, %
+sim.ni.ideal.branch.ithd             2.44   ideal switches: the same, phase-current THD49, %
+sim.ni.drops.opt.dev                0.149   datasheet devices: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.drops.b1                      0.49   datasheet devices: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.drops.ripple.pp               23.8   datasheet devices: largest neutral-point voltage, V peak to peak
+sim.ni.drops.offset.min             -1.44   datasheet devices: smallest measured NP offset, % of Vdc
+sim.ni.drops.offset.max             -0.45   datasheet devices: largest measured NP offset, % of Vdc
+sim.ni.drops.lut.circuit            61.14   datasheet devices: table at its worst point, circuit THD49, %
+sim.ni.drops.lut.ithd                6.49   datasheet devices: the same, phase-current THD49, %
+sim.ni.drops.branch.circuit           1.11   datasheet devices: branch-aware table at that Ma, circuit THD49, %
+sim.ni.drops.branch.ithd             2.37   datasheet devices: the same, phase-current THD49, %
+sim.ni.dt.opt.dev                   0.180   + dead time 2 us: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.dt.b1                         0.95   + dead time 2 us: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.dt.ripple.pp                  23.6   + dead time 2 us: largest neutral-point voltage, V peak to peak
+sim.ni.dt.offset.min                -1.41   + dead time 2 us: smallest measured NP offset, % of Vdc
+sim.ni.dt.offset.max                -0.45   + dead time 2 us: largest measured NP offset, % of Vdc
+sim.ni.dt.lut.circuit               61.57   + dead time 2 us: table at its worst point, circuit THD49, %
+sim.ni.dt.lut.ithd                   6.52   + dead time 2 us: the same, phase-current THD49, %
+sim.ni.dt.branch.circuit             1.17   + dead time 2 us: branch-aware table at that Ma, circuit THD49, %
+sim.ni.dt.branch.ithd                2.36   + dead time 2 us: the same, phase-current THD49, %
+sim.ni.np.opt.dev                   0.128   + NP offset 2%: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.np.b1                         0.49   + NP offset 2%: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.np.ripple.pp                  27.2   + NP offset 2%: largest neutral-point voltage, V peak to peak
+sim.ni.np.offset.min                 0.03   + NP offset 2%: smallest measured NP offset, % of Vdc
+sim.ni.np.offset.max                 1.07   + NP offset 2%: largest measured NP offset, % of Vdc
+sim.ni.np.lut.circuit               61.14   + NP offset 2%: table at its worst point, circuit THD49, %
+sim.ni.np.lut.ithd                   6.41   + NP offset 2%: the same, phase-current THD49, %
+sim.ni.np.branch.circuit             1.06   + NP offset 2%: branch-aware table at that Ma, circuit THD49, %
+sim.ni.np.branch.ithd                2.21   + NP offset 2%: the same, phase-current THD49, %
+sim.ni.tq.opt.dev                   0.158   + timer 1 us: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.tq.b1                         0.47   + timer 1 us: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.tq.ripple.pp                  23.9   + timer 1 us: largest neutral-point voltage, V peak to peak
+sim.ni.tq.offset.min                -1.44   + timer 1 us: smallest measured NP offset, % of Vdc
+sim.ni.tq.offset.max                -0.45   + timer 1 us: largest measured NP offset, % of Vdc
+sim.ni.tq.lut.circuit               61.17   + timer 1 us: table at its worst point, circuit THD49, %
+sim.ni.tq.lut.ithd                   6.49   + timer 1 us: the same, phase-current THD49, %
+sim.ni.tq.branch.circuit             1.12   + timer 1 us: branch-aware table at that Ma, circuit THD49, %
+sim.ni.tq.branch.ithd                2.37   + timer 1 us: the same, phase-current THD49, %
+sim.ni.all.opt.dev                  0.168   all combined: optimal patterns, largest |circuit - closed form| THD49, pp
+sim.ni.all.b1                        0.93   all combined: optimal patterns, largest |fundamental error| in the circuit, %
+sim.ni.all.ripple.pp                 27.0   all combined: largest neutral-point voltage, V peak to peak
+sim.ni.all.offset.min                0.06   all combined: smallest measured NP offset, % of Vdc
+sim.ni.all.offset.max                1.09   all combined: largest measured NP offset, % of Vdc
+sim.ni.all.lut.circuit              61.61   all combined: table at its worst point, circuit THD49, %
+sim.ni.all.lut.ithd                  6.45   all combined: the same, phase-current THD49, %
+sim.ni.all.branch.circuit            1.12   all combined: branch-aware table at that Ma, circuit THD49, %
+sim.ni.all.branch.ithd               2.21   all combined: the same, phase-current THD49, %
+time.total                           0.00   hours for the whole run
