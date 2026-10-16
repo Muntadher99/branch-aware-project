@@ -2,7 +2,7 @@
 
 This package reproduces the results of
 
-> M. S. Sukkar and K. K. Abdalla, "Why Interpolated Lookup Tables Fail for Selective Harmonic Mitigation: Branch Decomposition and Branch-Aware Tables in Three-Level Neutral-Point-Clamped Converters," *International Journal of Intelligent Engineering and Systems* (under review).
+> M. S. Sukkar and K. K. Abdalla, "Why Interpolated Lookup Tables Fail for Selective Harmonic Mitigation: Branch Decomposition and Branch-Aware Tables in Three-Level Neutral-Point-Clamped Converters," (under review).
 
 It contains the MATLAB code that computes every result of the paper, a Python script that draws its figures, the Simulink models of the circuit simulations, and the complete results of the run the paper reports. Every switching-angle solution is computed by MATLAB's `fmincon` with analytic gradients. The neural networks, Gaussian processes, ANFIS models and the workbook writer are written in plain MATLAB, so no other toolbox is needed.
 
@@ -168,7 +168,3 @@ The operation count of a pchip read with on-line slopes (Section 6.5, about 290 
 - Wall-clock times (the run times, the on-line times of stages E5 and TIM, the time per corrector solve) are measurements of the computer and differ from run to run, as do the dates and the platform recorded with each run. `verify_reproduction` lists them separately and does not count them as differences.
 - With another MATLAB release or processor, `fmincon` may differ in the last bits of its iterates. Where many local optima lie close together this can change which optimum a random start reaches, so individual numbers can differ slightly; the stored stage results in `results/cache` are the reference.
 - Workbooks (`.xlsx`) and figures (`.pdf`, `.png`) carry creation dates and are not compared; they are drawn from the compared data.
-
-## Contact
-
-Muntadher Saeed Sukkar, Department of Electrical Engineering, College of Engineering, University of Babylon, Hilla, Iraq (muntazer.moaawin459@student.uobabylon.edu.iq).
